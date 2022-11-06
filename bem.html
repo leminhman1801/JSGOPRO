@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bem.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+<body>
+    <div>
+           
+        <div>
+            <button onclick="showSuccessToast();" class="btn btn--success">Success</button>
+            <button onclick="showInfoToast();" class="btn btn--warn ">OK</button>
+            <button onclick="showWarningToast();" class="btn btn--danger">TRY AGAIN</button>
+         </div>
+              
+    </div> 
+      <!-- End button  -->
+
+    <div id="toast"> 
+        <!-- Success  -->
+        <!-- <div class="toast toast--success">
+            <div class="toast__icon">
+                <i class="fa-regular fa-circle-check"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Success</h3>
+                <p class="toast_msg">Anyone with access can view your invited visitors</p>
+            </div>
+            <div class="toast__close">
+                <i class="fa-solid fa-rectangle-xmark"></i>
+            </div>
+        </div> -->
+
+            <!-- Info  -->
+        <!-- <div class="toast toast--info">
+            <div class="toast__icon">
+                <i class="fa-solid fa-circle-info"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Info</h3>
+                <p class="toast_msg">Anyone with access can view your invited visitors</p>
+            </div>
+            <div class="toast__close">
+                <i class="fa-solid fa-rectangle-xmark"></i>
+            </div>
+        </div> -->
+        <!-- Warning  -->
+        <!-- <div class="toast toast--warning">
+            <div class="toast__icon">
+                <i class="fa-solid fa-circle-exclamation"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Warning</h3>
+                <p class="toast_msg">Anyone with access can view your invited visitors</p>
+            </div>
+            <div class="toast__close">
+                <i class="fa-solid fa-rectangle-xmark"></i>
+            </div>
+        </div> -->
+
+        <!-- Error  -->
+        <!-- <div class="toast toast--error">
+            <div class="toast__icon">
+                <i class="fa-sharp fa-solid fa-bug"></i>
+            </div>
+            <div class="toast__body">
+                <h3 class="toast__title">Error</h3>
+                <p class="toast_msg">Anyone with access can view your invited visitors</p>
+            </div>
+            <div class="toast__close">
+                <i class="fa-solid fa-rectangle-xmark"></i>
+            </div>
+        </div> -->
+    </div>
+   
+    <script src="toast.js">
+        // Toast function 
+        // function toast ({
+        //     title = '',
+        //     message = '',
+        //     type = 'info',
+        //     duration = 3000
+        // }) {
+        //     const main = document.getElementById('toast');
+        //     if (main) {
+        //         const toast = document.createElement('div');
+
+                // Auto remove toast 
+        //         const autoRemoveId = setTimeout(function() {
+        //             main.removeChild(toast);
+        //         },duration + 1000);
+
+        //         toast.onclick = function (e) {
+        //             if (e.target.closest('.toast__close')) {
+        //                 main.removeChild(toast);
+        //                 clearTimeout(autoRemoveId)
+        //             }
+        //         }
+
+        //         const icons = {
+        //             success: 'fa-regular fa-circle-check',
+        //             info: 'fa-solid fa-circle-info',
+        //             warning: 'fa-solid fa-circle-exclamation',
+        //             error: 'fa-sharp fa-solid fa-bug'
+
+        //         };
+        //         const icon = icons [type];
+        //         const delay = (duration / 1000).toFixed(2);
+        //         toast.classList.add('toast', `toast--${type}`);
+        //         toast.style.animation = `slideInLeft ease 0.3s, fadeOut linear 1s ${delay}s forwards`;
+        //         toast.innerHTML =  `
+        //         <div class="toast__icon">
+        //             <i class="${icon}"></i> 
+        //         </div>
+        //         <div class="toast__body">
+        //             <h3 class="toast__title">${title}</h3>
+        //             <p class="toast_msg">${message}</p>
+        //         </div>
+        //         <div class="toast__close">
+        //             <i class="fa-solid fa-rectangle-xmark"></i>
+        //         </div>
+        //     `;
+        //         main.appendChild(toast);
+
+               
+        //     }
+
+        // }
+        // toast ({
+        //     title: 'Success',
+        //     message: 'Anyone with access can view your invited visitors',
+        //     type: 'warning',
+        //     duration: 3000
+        // });
+        function showSuccessToast () {
+            toast({
+            title: 'Success',
+            message: 'Anyone with access can view your invited visitors',
+            type: 'success',
+            duration: 1000
+            })
+        }
+        function showInfoToast () {
+            toast({
+            title: 'Info',
+            message: 'Anyone careful with access can view your invited visitors',
+            type: 'info',
+            duration: 3000
+            })
+        }
+        function showWarningToast () {
+            toast({
+            title: 'Warning',
+            message: 'Anyone with access can not view your invited visitors',
+            type: 'warning',
+            duration: 3000
+            })
+        }
+    </script>
+</body>
+</html>
